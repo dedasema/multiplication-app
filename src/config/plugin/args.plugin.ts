@@ -36,7 +36,6 @@ export const yarg = yargs(hideBin(process.argv))
     })
     .check((argv, options) => {
         if( argv.b < 1 ) throw 'Error: La base debe ser mayor a 1'
-        // console.log({argv, options}) // Removed debug logging
         return true
     })
     .parseSync()
