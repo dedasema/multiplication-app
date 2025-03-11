@@ -7,11 +7,11 @@ interface RunOptions {
     limit: number,
     showTable: boolean,
     name: string,
-    destination: string
+    fileDestination: string
 }
 
 export class ServerApp {
-    static run({base, limit, showTable, name, destination}: RunOptions) {
+    static run({base, limit, showTable, name, fileDestination}: RunOptions) {
         console.log('Servidor corriendo...')
         const table = new CreateTable()
             .execute({
@@ -23,7 +23,7 @@ export class ServerApp {
             .execute({
                 fileContent: table,
                 fileName: name,
-                destination
+                fileDestination
             })
             
         if ( showTable )  console.log(table)
