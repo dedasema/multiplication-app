@@ -29,7 +29,8 @@ export class SaveFile implements SaveFileUseCase {
             console.log('Archivo creado')
             return true
         } catch (error) {
-            console.error(error)
+            // console.error(error)
+            console.error('Error al guardar el archivo')
             return false
         }
     }
